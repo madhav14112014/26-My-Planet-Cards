@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Planet Cards JS</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 30px;
+                background-color: #f0f4ff;
+            }
+            h2 {
+                color: #ff5a43;
+            }
+            .div1cards, .div2cards {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 25px;
+            }
+            .card {
+                background-color: #ffffff;
+                border: 3px solid #ff5a43;
+                border-radius: 12px;
+                padding: 20px;
+                width: 200px;
+            }
+            .planet-name {
+                font-weight: bold;
+                font-size: 16px;
+                color: #333;
+                color:orangered;
+            }
+            .planet-fact {
+                color:orangered;
+                margin-top: 12px;
+                font-size: 14px;
+            }
+            button {
+                background-color: #ff5a43;
+                color: white;
+                border: none;
+                padding: 12px 28px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>My Planet Cards</h2>
+        <button onclick="showPlanets()">Show Planets</button>
+        <div class="div1cards">
+            <div id="card1"></div>
+            <div id="card2"></div>
+            <div id="card3"></div>
+            <div id="card4"></div>
+           
+        </div>
+        <div class="div2cards">
+         <div id="card5"></div>
+            <div id="card6"></div>
+            <div id="card7"></div>
+            <div id="card8"></div>
+        </div>
+        <script>
+            class Planet {
+                constructor(name, fact, img) {
+                    this.name = name;
+                    this.fact = fact;
+                    this.img = img;
+                }
+                describe() {
+                    return this.name + ": " + this.fact;
+                }
+            }
+            function showPlanets() {
+                let planet1 = new Planet("Mercury", "The smallest planet in our solar system.", "Mercury.jpg");
+                let planet2 = new Planet("Venus", "The hottest planet in our solar system.", "Venus.jpg");
+                let planet3 = new Planet("Earth", "The only planet known to support life.", "Earth.jpg");
+                let planet4 = new Planet("Mars", "The red planet.", "Mars.jpg");
+                let planet5 = new Planet("Jupiter", "The largest planet in our solar system.", "Jupiter.jpg");
+                let planet6 = new Planet("Saturn", "Famous for its beautiful rings.", "Saturn.jpg");
+                let planet7 = new Planet("Uranus", "An ice giant with a unique tilt.", "Uranus.jpg");
+                let planet8 = new Planet("Neptune", "The farthest planet from the Sun.", "Neptune.jpg");
+
+                document.getElementById("card1").innerHTML = "<div class='card'><div class='planet-name'>" + planet1.name + "</div>"+ "<div class='planet-fact'>" + planet1.describe() + "</div>"+"<img src='" + planet1.img + "' alt='" + planet1.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                document.getElementById("card2").innerHTML = "<div class='card'><div class='planet-name'>" + planet2.name + "</div>"+ "<div class='planet-fact'>" + planet2.describe() + "</div>"+"<img src='" + planet2.img + "' alt='" + planet2.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                document.getElementById("card3").innerHTML = "<div class='card'><div class='planet-name'>" + planet3.name + "</div>"+ "<div class='planet-fact'>" + planet3.describe() + "</div>"+"<img src='" + planet3.img + "' alt='" + planet3.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                document.getElementById("card4").innerHTML = "<div class='card'><div class='planet-name'>" + planet4.name + "</div>"+ "<div class='planet-fact'>" + planet4.describe() + "</div>"+"<img src='" + planet4.img + "' alt='" + planet4.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                document.getElementById("card5").innerHTML = "<div class='card'><div class='planet-name'>" + planet5.name + "</div>"+ "<div class='planet-fact'>" + planet5.describe() + "</div>"+"<img src='" + planet5.img + "' alt='" + planet5.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                document.getElementById("card6").innerHTML = "<div class='card'><div class='planet-name'>" + planet6.name + "</div>"+ "<div class='planet-fact'>" + planet6.describe() + "</div>"+"<img src='" + planet6.img + "' alt='" + planet6.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                document.getElementById("card7").innerHTML = "<div class='card'><div class='planet-name'>" + planet7.name + "</div>"+ "<div class='planet-fact'>" + planet7.describe() + "</ div>"+"<img src='" + planet7.img + "' alt='" + planet7.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                document.getElementById("card8").innerHTML = "<div class='card'><div class='planet-name'>" + planet8.name + "</div>"+ "<div class='planet-fact'>" + planet8.describe() + "</ div>"+"<img src='" + planet8.img + "' alt='" + planet8.name + "' style='width:50%; border-radius: 8px; margin-top: 10px;  display: flex; flex-direction: column;align-items: center; '>";
+                }
+        </script>
+    </body>
+</html>
